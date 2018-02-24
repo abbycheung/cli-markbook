@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="cheung-cli-markbook/src"/>
+	<classpathentry kind="output" path="cheung-cli-markbook/out/production/cheung-cli-markbook"/>
+</classpath>
