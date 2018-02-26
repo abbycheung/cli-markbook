@@ -15,7 +15,7 @@ public class Main {
         int[] marks = new int[]{10,20,15,25,16,60,100};
          
         for (;;) {
-        	System.out.println("What do you want to do? \n inStudent - add student info \n view - view all student info \n average - calculate class average \n Login - retrieve Google login \n exit");
+        	System.out.println("What do you want to do? \n inStudent - add student info \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
             String response = input.next();
              
              
