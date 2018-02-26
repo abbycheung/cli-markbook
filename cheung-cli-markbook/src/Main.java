@@ -68,23 +68,23 @@ public class Main {
              }
             
             if (response.equals("login")) {
-                System.out.println("Please enter the following information");
+                System.out.println("To retrieve Google login info, please enter the following information:");
                 
                 //retrieving user information for google login
                 System.out.print("Student's first name: ");
-                String firstName = input.next();
+                String fName = input.next();
                 System.out.print("Student's last name: ");
-                String lastName = input.next();
+                String lName = input.next();
                 System.out.print("Student number:");
-                String studentNumber = input.next();
+                String studentNum = input.next();
                 System.out.print("Student's graduation year:");
-                String gradYear = input.next();
+                String gradYr = input.next();
 
                 System.out.println(" ");
 
                 //putting together google login
-                String email = firstName + "." + lastName + gradYear.substring(2, 4) + "@ycdsbk12.ca";
-                String password = firstName.substring(0, 1).toUpperCase() + lastName.substring(0, 1).toLowerCase() + studentNumber;
+                String email = fName + "." + lName + gradYr.substring(2, 4) + "@ycdsbk12.ca";
+                String password = fName.substring(0, 1).toUpperCase() + lName.substring(0, 1).toLowerCase() + studentNum;
 
                 System.out.println("Email: " + email);
                 System.out.println("Password: " + password);
