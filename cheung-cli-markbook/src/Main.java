@@ -15,11 +15,11 @@ public class Main {
         ArrayList<Integer> marks = new ArrayList<Integer>();
          
         for (;;) {
-        	System.out.println("What do you want to do? \n inStudent - add student info \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
+        	System.out.println("What do you want to do? \n add - add student info \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
             String response = input.next();
              
              
-            if (response.equals("inStudent")) {
+            if (response.equals("add")) {
             	System.out.println("How many students do you want to input? ");
                 int students = input.nextInt();
                  
@@ -44,10 +44,17 @@ public class Main {
              }
             
              if (response.equals("view")) {
-            	 System.out.println(firstName);
-            	 System.out.println(lastName);
-            	 System.out.println(studentNumber);
-            	 System.out.println(gradYear);
+                 int length = firstName.size();
+                 System.out.println("First Name \t Last Name \t Student # \t Grad Year");
+                 
+                 for (int i = 0; i < length; i++) {
+                     String first = firstName.get(i);
+                     String last = lastName.get(i);
+                     int sNum = studentNumber.get(i);
+                     int gYear = gradYear.get(i);
+
+                     System.out.println(first + "\t \t" + last + "\t\t" + sNum + "\t\t" + gYear);
+               }
              }
              
              if (response.equals("average")) {
@@ -60,11 +67,6 @@ public class Main {
                double average = sum / marks.size();
                System.out.println("The class average is " + average);
                
-             }
-               
-             
-             if (response.equals("exit")) {
-            	 System.exit(0);
              }
             
             if (response.equals("login")) {
@@ -89,7 +91,10 @@ public class Main {
                 System.out.println("Email: " + email);
                 System.out.println("Password: " + password);
             }
+                     
+             if (response.equals("exit")) {
+            	 System.exit(0);
+             }
         }   
     }
-
 }
