@@ -56,6 +56,17 @@ public class Main {
                      System.out.println(first + "\t \t" + last + "\t\t" + sNum + "\t\t" + gYear);
                }
              }
+            
+             if (response.equals("input marks")) {
+              System.out.println("How many marks do you want to input? ");
+              int numberMarks = input.nextInt();
+              
+              for (int i = 0; i <= numberMarks; i++) {
+                System.out.print("Enter mark: ");
+                  marks.add(input.nextInt());
+              }
+
+             }
              
              if (response.equals("average")) {
                int sum = 0;
