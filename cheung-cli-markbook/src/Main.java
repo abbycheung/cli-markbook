@@ -12,7 +12,7 @@ public class Main {
         ArrayList<String> lastName = new ArrayList<String>();
         ArrayList<Integer> studentNumber = new ArrayList<Integer>();
         ArrayList<Integer> gradYear = new ArrayList<Integer>();
-        int[] marks = new int[]{10,20,15,25,16,60,100};
+        ArrayList<Integer> marks = new ArrayList<Integer>();
          
         for (;;) {
         	System.out.println("What do you want to do? \n inStudent - add student info \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
@@ -53,11 +53,11 @@ public class Main {
              if (response.equals("average")) {
                int sum = 0;
                
-               for (int i = 0; i < marks.length; i++){
-                 sum = sum + marks[i];
+               for (int i = 0; i < marks.size(); i++) {
+                 sum = sum + marks.get(i);
                }
                
-               double average = sum / marks.length;
+               double average = sum / marks.size();
                System.out.println("The class average is " + average);
                
              }
