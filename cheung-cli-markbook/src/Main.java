@@ -15,33 +15,52 @@ public class Main {
         ArrayList<Integer> marks = new ArrayList<Integer>();
          
         for (;;) {
-        	System.out.println("What do you want to do? \n add - add student info \n input marks \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
-            String response = input.nextLine();
+        	  System.out.println("What do you want to do? \n add - add student info \n remove - remove a specific student \n view - view all student info \n inputMarks - input marks \n viewMarks - view student marks \n average - calculate class average \n login - retrieve Google login \n exit");
+            String response = input.next();
              
              
             if (response.equals("add")) {
-            	System.out.println("How many students do you want to input? ");
+            	System.out.println("To exit input, enter \"none\" for first name");
+            	System.out.print("How many students do you want to input? ");
                 int students = input.nextInt();
                  
                 studentInfo:
                 for (int i = 1; i <= students; i++) {
-         	       System.out.println("Student first name?");
-         	       String firstN = input.next();
-         	        
-         	       if (firstN.equals("none")) {
-         	    	   break studentInfo;
-         	       } else {
+                  System.out.print("Student first name?");
+                  String firstN = input.next();
+                  
+                  
+                  if (firstN.equals("none")) {
+                    break studentInfo;
+         	        } else {
          	    	   firstName.add(firstN);
-         	    	   System.out.println("Student last name?");
+         	    	   System.out.print("Student last name?");
          	    	   lastName.add(input.next());
          	    	   
-         	    	   System.out.println("Student number?");
+         	    	   System.out.print("Student number?");
          	    	   studentNumber.add(input.nextInt());
-         	    	   System.out.println("Student graduation year?");
+         	    	   System.out.print("Student graduation year?");
          	    	   gradYear.add(input.nextInt());
          	        }	
-                 }
+                }
              }
+             
+             /*if (response.equals("remove")) {
+               System.out.print("What is the student number of the student?");
+               int student = input.nextInt();
+               
+               int length = studentNumber.size();
+               
+               for (int i = 0; i <= length; i++) {
+                 if (student == studentNumber.get(i)) {
+                   firstName.remove(i);
+                   lastName.remove(i);
+                   studentNumber.remove(i);
+                   gradYear.remove(i);
+                 } 
+               }
+               
+             } */
             
              if (response.equals("view")) {
                  int length = firstName.size();
@@ -56,16 +75,27 @@ public class Main {
                      System.out.println(first + "\t \t" + last + "\t\t" + sNum + "\t\t" + gYear);
                }
              }
+             
             
-             if (response.equals("input marks")) {
+             if (response.equals("inputMarks")) {
               System.out.println("How many marks do you want to input? ");
               int numberMarks = input.nextInt();
               
-              for (int i = 0; i <= numberMarks; i++) {
+              for (int i = 1; i <= numberMarks; i++) {
                 System.out.print("Enter mark: ");
                   marks.add(input.nextInt());
               }
-
+             }
+             
+             if (response.equals("viewMarks")) {
+               int length = marks.size();
+               for (int i = 0; i < length; i++) {
+                 int mark = marks.get(i);
+                 String FName = firstName.get(i);
+                 String LName = lastName.get(i);
+                 
+                 System.out.println(FName + " " + LName + ": " + mark);
+               }
              }
              
              if (response.equals("average")) {
@@ -102,10 +132,10 @@ public class Main {
                 System.out.println("Email: " + email);
                 System.out.println("Password: " + password);
             }
-                     
-             if (response.equals("exit")) {
-            	 System.exit(0);
-             }
+            
+            if (response.equals("exit")) {
+              System.exit(0);
+           }
         }   
     }
 }
