@@ -46,13 +46,13 @@ public class Main {
              }
              
              if (response.equals("remove")) {
-               System.out.print("What is the student's first name?");
-               String student = input.next();
+               System.out.print("What is the student's student number?");
+               int student = input.nextInt();
                
-               int length = firstName.size();
+               int length = studentNumber.size();
                
                for (int i = 0; i <= length - 1; i++) {
-                 if (firstName.get(i).equals(student)) {
+                 if (studentNumber.get(i) == student) {
                    firstName.remove(i);
                    lastName.remove(i);
                    studentNumber.remove(i);
