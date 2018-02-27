@@ -15,8 +15,8 @@ public class Main {
         ArrayList<Integer> marks = new ArrayList<Integer>();
          
         for (;;) {
-        	System.out.println("What do you want to do? \n add - add student info \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
-            String response = input.next();
+        	System.out.println("What do you want to do? \n add - add student info \n input marks \n view - view all student info \n average - calculate class average \n login - retrieve Google login \n exit");
+            String response = input.nextLine();
              
              
             if (response.equals("add")) {
