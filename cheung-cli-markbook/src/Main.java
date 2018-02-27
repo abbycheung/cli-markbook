@@ -45,14 +45,14 @@ public class Main {
                 }
              }
              
-             /*if (response.equals("remove")) {
-               System.out.print("What is the student number of the student?");
-               int student = input.nextInt();
+             if (response.equals("remove")) {
+               System.out.print("What is the student's first name?");
+               String student = input.next();
                
-               int length = studentNumber.size();
+               int length = firstName.size();
                
-               for (int i = 0; i <= length; i++) {
-                 if (student == studentNumber.get(i)) {
+               for (int i = 0; i <= length - 1; i++) {
+                 if (firstName.get(i).equals(student)) {
                    firstName.remove(i);
                    lastName.remove(i);
                    studentNumber.remove(i);
@@ -60,7 +60,9 @@ public class Main {
                  } 
                }
                
-             } */
+               System.out.println("Student removed.");
+               
+             } 
             
              if (response.equals("view")) {
                  int length = firstName.size();
