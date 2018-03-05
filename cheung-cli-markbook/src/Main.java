@@ -90,7 +90,6 @@ public class Main {
 
         StudentRemoval:
         for (int i = 0; i < length; i++) {
-
             if (sNumber == studentNumber.get(i)) {
                 firstName.remove(i);
                 lastName.remove(i);
